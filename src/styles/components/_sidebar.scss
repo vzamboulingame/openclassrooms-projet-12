@@ -1,0 +1,45 @@
+/*****************************************
+* SIDEBAR COMPONENT STYLES
+*****************************************/
+
+@use "../utils/" as *;
+
+.sidebar {
+    background-color: black;
+    width: 11rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em 0;
+
+    &-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2em;
+        height: 100%;
+
+        &-logo {
+            width: 6.4rem;
+            height: 6.4rem;
+            transition: $transition-time;
+
+            &:hover {
+                filter: invert(5);
+            }
+        }
+    }
+
+    &-text {
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #ffffff;
+        transform: rotate(-90deg);
+        text-align: center;
+        white-space: nowrap;
+        text-align: center;
+        transform-origin: center center;
+    }
+}

@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 import "./styles/style.scss";
 
 /**
@@ -11,6 +12,9 @@ function App() {
   return (
     <div>
       <Header />
+      <main className="main">
+        <Sidebar />
+      </main>
     </div>
   );
 }
