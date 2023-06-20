@@ -14,16 +14,16 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-filler"></div>
       <nav className="sidebar-nav">
-        <a className="sidebar-nav-logo" href="#">
+        <a className="sidebar-nav-logo" href="/">
           <img src={yogaLogo} alt="Yoga Logo" />
         </a>
-        <a className="sidebar-nav-logo" href="#">
+        <a className="sidebar-nav-logo" href="/">
           <img src={swimmingLogo} alt="Swimming Logo" />
         </a>
-        <a className="sidebar-nav-logo" href="#">
+        <a className="sidebar-nav-logo" href="/">
           <img src={bikeLogo} alt="Bike Logo" />
         </a>
-        <a className="sidebar-nav-logo" href="#">
+        <a className="sidebar-nav-logo" href="/">
           <img src={dumbbellLogo} alt="Dumbbell Logo" />
         </a>
       </nav>

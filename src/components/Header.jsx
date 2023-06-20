@@ -13,16 +13,16 @@ export default function Header() {
         <a className="header-nav-logo" href="/">
           <img src={logo} alt="Sportsee Logo" />
         </a>
-        <a className="header-nav-link" href="#">
+        <a className="header-nav-link" href="/">
           Accueil
         </a>
-        <a className="header-nav-link" href="#">
+        <a className="header-nav-link" href="/">
           Profil
         </a>
-        <a className="header-nav-link" href="#">
+        <a className="header-nav-link" href="/">
           Réglage
         </a>
-        <a className="header-nav-link header-nav-link-last" href="#">
+        <a className="header-nav-link header-nav-link-last" href="/">
           Communauté
         </a>
       </nav>
