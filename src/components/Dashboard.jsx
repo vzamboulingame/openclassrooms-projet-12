@@ -1,3 +1,9 @@
+import KeyMetrics from "./KeyMetrics";
+import caloriesIcon from "../images/calories-icon.svg";
+import glucidesIcon from "../images/glucides-icon.svg";
+import lipidesIcon from "../images/lipides-icon.svg";
+import proteinesIcon from "../images/proteines-icon.svg";
+
 /**
  * Dashboard component.
  *
@@ -30,16 +36,16 @@ export default function Dashboard() {
           Objective
         </div>
         <div className="dashboard-charts-calories dashboard-charts-all">
-          Calories
+          <KeyMetrics icon={caloriesIcon} name="Calories" value="0" />
         </div>
         <div className="dashboard-charts-proteines dashboard-charts-all">
-          Proteines
+          <KeyMetrics icon={proteinesIcon} name="Proteines" value="0" />
         </div>
         <div className="dashboard-charts-glucides dashboard-charts-all">
-          Glucides
+          <KeyMetrics icon={glucidesIcon} name="Glucides" value="0" />
         </div>
         <div className="dashboard-charts-lipides dashboard-charts-all">
-          Lipides
+          <KeyMetrics icon={lipidesIcon} name="Lipides" value="0" />
         </div>
       </div>
     </section>
