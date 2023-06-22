@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
+import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
-import Empty from "./components/Empty";
+
 import "./styles/style.scss";
 
 /**
@@ -16,15 +15,11 @@ import "./styles/style.scss";
 function App() {
   return (
     <Router>
-      <Header />
-      <main className="main">
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Empty />} />
-          <Route path="/user/:userId" element={<Dashboard />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/user/:userId" element={<Dashboard />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Router>
   );
 }

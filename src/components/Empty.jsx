@@ -1,3 +1,6 @@
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+
 /**
  * Empty component.
  *
@@ -5,5 +8,13 @@
  * @returns {JSX.Element} - Rendered component.
  */
 export default function Empty() {
-  return <section className="empty"></section>;
+  return (
+    <div>
+      <Header />
+      <main className="main">
+        <Sidebar />
+        <section className="empty"></section>
+      </main>
+    </div>
+  );
 }
