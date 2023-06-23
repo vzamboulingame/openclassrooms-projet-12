@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { DataContextProvider } from "./utils/DataContext";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
@@ -17,7 +18,14 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/user/:userId" element={<Dashboard />} />
+        <Route
+          path="/user/:userId"
+          element={
+            <DataContextProvider>
+              <Dashboard />
+            </DataContextProvider>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
