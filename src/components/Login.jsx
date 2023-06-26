@@ -11,6 +11,8 @@ import logo from "../images/header-logo.svg";
 export default function Login() {
   const navigate = useNavigate();
   const [userId, setUserId] = useState("");
+  const apiUrl = "http://localhost:3500";
+  const userUrl = `${apiUrl}/user/${userId}`;
 
   function handleChange(e) {
     setUserId(e.target.value);
@@ -18,8 +20,18 @@ export default function Login() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const path = generatePath("/user/:userId", { userId });
-    navigate(path);
+    fetch(userUrl)
+      .then((response) => {
+        if (response.ok) {
+          const path = generatePath("/user/:userId", { userId });
+          navigate(path);
+        } else {
+          navigate("/notfound");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   return (
