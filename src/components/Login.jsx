@@ -32,6 +32,8 @@ export default function Login() {
           value={userId}
           onChange={handleChange}
           placeholder="User ID"
+          pattern="^[0-9]*$"
+          required
         />
         <button className="login-btn" type="submit">
           Envoyer
