@@ -52,16 +52,32 @@ export default function Dashboard() {
               Objective
             </div>
             <div className="dashboard-charts-calories dashboard-charts-all">
-              <KeyMetrics icon={caloriesIcon} name="Calories" value="0" />
+              <KeyMetrics
+                icon={caloriesIcon}
+                name="Calories"
+                value={userData.keyData.calorieCount}
+              />
             </div>
             <div className="dashboard-charts-proteines dashboard-charts-all">
-              <KeyMetrics icon={proteinesIcon} name="Proteines" value="0" />
+              <KeyMetrics
+                icon={proteinesIcon}
+                name="Proteines"
+                value={userData.keyData.proteinCount}
+              />
             </div>
             <div className="dashboard-charts-glucides dashboard-charts-all">
-              <KeyMetrics icon={glucidesIcon} name="Glucides" value="0" />
+              <KeyMetrics
+                icon={glucidesIcon}
+                name="Glucides"
+                value={userData.keyData.carbohydrateCount}
+              />
             </div>
             <div className="dashboard-charts-lipides dashboard-charts-all">
-              <KeyMetrics icon={lipidesIcon} name="Lipides" value="0" />
+              <KeyMetrics
+                icon={lipidesIcon}
+                name="Lipides"
+                value={userData.keyData.lipidCount}
+              />
             </div>
           </div>
         </section>
