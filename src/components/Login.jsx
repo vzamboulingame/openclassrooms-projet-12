@@ -10,7 +10,7 @@ import logo from "../images/header-logo.svg";
  */
 export default function Login() {
   const navigate = useNavigate();
-  const [userId, setUserId] = useState();
+  const [userId, setUserId] = useState("");
 
   function handleChange(e) {
     setUserId(e.target.value);
