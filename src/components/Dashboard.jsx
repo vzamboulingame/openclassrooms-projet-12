@@ -3,6 +3,7 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import KeyMetrics from "./KeyMetrics";
 import Empty from "./Empty";
+import ActivityChart from "./ActivityChart";
 import caloriesIcon from "../images/calories-icon.svg";
 import glucidesIcon from "../images/glucides-icon.svg";
 import lipidesIcon from "../images/lipides-icon.svg";
@@ -40,7 +41,7 @@ export default function Dashboard() {
           </div>
           <div className="dashboard-charts">
             <div className="dashboard-charts-activity dashboard-charts-all">
-              Activity
+              <ActivityChart data={activityData} />
             </div>
             <div className="dashboard-charts-sessions dashboard-charts-all">
               Average Sessions
