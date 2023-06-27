@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchData } from "./fetchData";
+import { apiUrl } from "./apiUrl";
 
 export const DataContext = createContext();
 
@@ -11,7 +12,6 @@ export function useDataContext() {
 export function DataContextProvider(props) {
   const { userId } = useParams();
 
-  const apiUrl = "http://localhost:3500";
   const userUrl = `${apiUrl}/user/${userId}`;
   const activityUrl = `${apiUrl}/user/${userId}/activity`;
   const avgSessionsUrl = `${apiUrl}/user/${userId}/average-sessions`;

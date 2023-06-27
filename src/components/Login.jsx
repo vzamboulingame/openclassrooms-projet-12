@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { generatePath, useNavigate } from "react-router-dom";
 import logo from "../images/header-logo.svg";
+import { apiUrl } from "../utils/apiUrl";
 
 /**
  * Login component.
@@ -11,7 +12,6 @@ import logo from "../images/header-logo.svg";
 export default function Login() {
   const navigate = useNavigate();
   const [userId, setUserId] = useState("");
-  const apiUrl = "http://localhost:3500";
   const userUrl = `${apiUrl}/user/${userId}`;
 
   function handleChange(e) {
