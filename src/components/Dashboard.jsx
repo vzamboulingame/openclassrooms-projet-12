@@ -5,6 +5,7 @@ import KeyMetrics from "./KeyMetrics";
 import Empty from "./Empty";
 import ActivityChart from "./ActivityChart";
 import ObjectiveChart from "./ObjectiveChart";
+import PerformanceChart from "./PerformanceChart";
 import caloriesIcon from "../images/calories-icon.svg";
 import glucidesIcon from "../images/glucides-icon.svg";
 import lipidesIcon from "../images/lipides-icon.svg";
@@ -48,7 +49,7 @@ export default function Dashboard() {
               Average Sessions
             </div>
             <div className="dashboard-charts-performance dashboard-charts-all">
-              Performance
+              <PerformanceChart data={performanceData} />
             </div>
             <div className="dashboard-charts-objective dashboard-charts-all">
               <ObjectiveChart data={userData} />
