@@ -41,9 +41,7 @@ export default function ObjectiveChart(props) {
         <text
           x="50%"
           y="42%"
-          scaleToFit={true}
           textAnchor="middle"
-          verticalAnchor="middle"
           style={{ fill: "#282D30", fontSize: "2.6rem", fontWeight: "700" }}
         >
           {scorePercentage} %
@@ -51,9 +49,7 @@ export default function ObjectiveChart(props) {
         <text
           x="50%"
           y="50%"
-          scaleToFit={true}
           textAnchor="middle"
-          verticalAnchor="middle"
           style={{ fill: "#74798C", fontSize: "1.6rem", fontWeight: "500" }}
         >
           de votre
@@ -61,9 +57,7 @@ export default function ObjectiveChart(props) {
         <text
           x="50%"
           y="58%"
-          scaleToFit={true}
           textAnchor="middle"
-          verticalAnchor="middle"
           style={{ fill: "#74798C", fontSize: "1.6rem", fontWeight: "500" }}
         >
           objectif
