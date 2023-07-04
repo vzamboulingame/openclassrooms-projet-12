@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import KeyMetrics from "./KeyMetrics";
 import Empty from "./Empty";
 import ActivityChart from "./ActivityChart";
+import ObjectiveChart from "./ObjectiveChart";
 import caloriesIcon from "../images/calories-icon.svg";
 import glucidesIcon from "../images/glucides-icon.svg";
 import lipidesIcon from "../images/lipides-icon.svg";
@@ -50,7 +51,7 @@ export default function Dashboard() {
               Performance
             </div>
             <div className="dashboard-charts-objective dashboard-charts-all">
-              Objective
+              <ObjectiveChart data={userData} />
             </div>
             <div className="dashboard-charts-calories dashboard-charts-all">
               <KeyMetrics
