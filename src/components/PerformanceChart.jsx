@@ -32,8 +32,6 @@ export default function PerformanceChart(props) {
     }))
     .reverse();
 
-  console.log(formattedData);
-
   return (
     <ResponsiveContainer width="90%" height="90%">
       <RadarChart data={formattedData} outerRadius="70%">

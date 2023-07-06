@@ -47,11 +47,21 @@ export default function ActivityChart(props) {
   };
 
   return (
-    <ResponsiveContainer width="80%" height="80%">
+    <ResponsiveContainer width="90%" height="80%">
       <BarChart data={activityData.sessions} barGap={12} barSize={8}>
-        <text x={0} y={20} fill="black" textAnchor="left">
-          <tspan style={{ fontWeight: 500 }}>Activité quotidienne</tspan>
+        <text
+          x={0}
+          y={20}
+          textAnchor="left"
+          style={{
+            fontSize: "1.8rem",
+            fontWeight: 500,
+            fill: "#000000",
+          }}
+        >
+          Activité quotidienne
         </text>
+
         <CartesianGrid strokeDasharray="3 3" opacity={0.5} vertical={false} />
         <XAxis
           dataKey={activityDayNumbers}

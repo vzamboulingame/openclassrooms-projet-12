@@ -23,8 +23,17 @@ export default function ObjectiveChart(props) {
   return (
     <ResponsiveContainer width="90%" height="90%">
       <PieChart>
-        <text x={20} y={30} fill="black" textAnchor="left">
-          <tspan style={{ fontWeight: 500 }}>Score</tspan>
+        <text
+          x={20}
+          y={30}
+          textAnchor="left"
+          style={{
+            fontSize: "1.8rem",
+            fontWeight: 500,
+            fill: "#000000",
+          }}
+        >
+          Score
         </text>
         <Pie
           data={data}
