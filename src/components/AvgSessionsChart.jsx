@@ -45,7 +45,7 @@ export default function AvgSessionsChart(props) {
       >
         <defs>
           <linearGradient id="lineGradient">
-            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="50%" />
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="30%" />
             <stop offset="100%" stopColor="#FFFFFF" stopOpacity="100%" />
           </linearGradient>
         </defs>

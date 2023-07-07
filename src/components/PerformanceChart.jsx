@@ -38,7 +38,7 @@ export default function PerformanceChart(props) {
         <PolarAngleAxis
           dataKey="kind"
           tickLine={false}
-          tick={{ fontSize: "1.2rem" }}
+          tick={{ fontSize: "1.3rem", fontWeight: "500" }}
           stroke="#FFFFFF"
         />
         <PolarGrid radialLines={false} stroke="#FFFFFF" />
