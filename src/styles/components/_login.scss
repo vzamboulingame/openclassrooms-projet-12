@@ -41,4 +41,18 @@
         text-align: center;
         border-radius: 0.5rem;
     }
+
+    &-error {
+        height: 5rem;
+
+        &-message {
+            font-size: 3rem;
+            color: #ff0000;
+            text-align: center;
+            padding: 0.5em 1em;
+            border: #ff0000 solid 0.5rem;
+            border-radius: 1rem;
+            transition: $transition-time;
+        }
+    }
 }

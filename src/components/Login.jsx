@@ -13,6 +13,7 @@ export default function Login() {
   const navigate = useNavigate();
   const [userId, setUserId] = useState("");
   const userUrl = `${apiUrl}/user/${userId}`;
+  const [serverUnavailable, setServerUnavailable] = useState(false);
 
   function handleChange(e) {
     setUserId(e.target.value);
@@ -31,6 +32,10 @@ export default function Login() {
       })
       .catch((error) => {
         console.error(error);
+        setServerUnavailable(true);
+        setTimeout(() => {
+          setServerUnavailable(false);
+        }, 2000);
       });
   }
 
@@ -51,6 +56,11 @@ export default function Login() {
           Envoyer
         </button>
       </form>
+      <div className="login-error">
+        {serverUnavailable && (
+          <p className="login-error-message">Serveur indisponible</p>
+        )}
+      </div>
     </div>
   );
 }
