@@ -16,7 +16,6 @@ import {
 
 export default function AvgSessionsChart(props) {
   const avgSessionsData = props.data.sessions;
-
   const dayLetters = ["L", "M", "M", "J", "V", "S", "D"];
 
   const renderTooltip = ({ active, payload }) => {
@@ -42,8 +41,14 @@ export default function AvgSessionsChart(props) {
     <ResponsiveContainer width="90%" height="90%">
       <LineChart
         data={avgSessionsData}
-        margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
+        margin={{ top: 20, right: 10, left: 10, bottom: 20 }}
       >
+        <defs>
+          <linearGradient id="lineGradient">
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="50%" />
+            <stop offset="100%" stopColor="#FFFFFF" stopOpacity="100%" />
+          </linearGradient>
+        </defs>
         <text
           x={10}
           y={30}
@@ -63,27 +68,35 @@ export default function AvgSessionsChart(props) {
           tickLine={false}
           tick={{ fill: "#FFFFFF", fillOpacity: "50%" }}
           stroke="#FFFFFF"
-          tickMargin={20}
+          tickMargin={10}
           tickFormatter={(day) => dayLetters[day - 1]}
         />
         <YAxis
           dataKey="sessionLength"
           hide={true}
-          domain={["dataMin -10", "dataMax + 30"]}
+          domain={["dataMin -20", "dataMax + 50"]}
         />
         <Line
           dataKey="sessionLength"
           type="natural"
-          stroke="#FFFFFF"
-          strokeWidth={2}
+          stroke="url(#lineGradient)"
+          strokeWidth={2.5}
           dot={false}
           activeDot={{
             stroke: "#FFFFFF",
+            strokeOpacity: "50%",
             strokeWidth: 10,
-            strokeOpacity: 0.5,
           }}
         />
-        <Tooltip content={renderTooltip} />
+        <Tooltip
+          content={renderTooltip}
+          cursor={{
+            stroke: "#000000",
+            strokeOpacity: "10%",
+            strokeWidth: "20%",
+            height: "100%",
+          }}
+        />
       </LineChart>
     </ResponsiveContainer>
   );
