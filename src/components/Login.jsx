@@ -14,6 +14,7 @@ export default function Login() {
   const [userId, setUserId] = useState("");
   const userUrl = `${apiUrl}/user/${userId}`;
   const [serverUnavailable, setServerUnavailable] = useState(false);
+  const [userNonexistent, setUserNonexistent] = useState(false);
 
   function handleChange(e) {
     setUserId(e.target.value);
@@ -27,11 +28,13 @@ export default function Login() {
           const path = generatePath("/user/:userId", { userId });
           navigate(path);
         } else {
-          navigate("/notfound");
+          setUserNonexistent(true);
+          setTimeout(() => {
+            setUserNonexistent(false);
+          }, 2000);
         }
       })
       .catch((error) => {
-        console.error(error);
         setServerUnavailable(true);
         setTimeout(() => {
           setServerUnavailable(false);
@@ -58,7 +61,10 @@ export default function Login() {
       </form>
       <div className="login-error">
         {serverUnavailable && (
-          <p className="login-error-message">Serveur indisponible</p>
+          <p className="login-error-message">{"Serveur indisponible"}</p>
+        )}
+        {userNonexistent && (
+          <p className="login-error-message">{"Utilisateur inexistant"}</p>
         )}
       </div>
     </div>
