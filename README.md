@@ -17,8 +17,8 @@ Vous travaillez en tant que développeur chez SportSee, une startup dédiée au 
 
 Votre objectif sera de créer cette page de profil en :
 - utilisant une librairie pour les graphiques (D3 ou Recharts)
-- suivant la [maquette Figma](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design?node-id=4%3A1)
-- complétant les user stories figurant dans les TODO du [Kanban](https://openclassrooms.notion.site/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e?p=26fbb33e95e24ffeadeb24540c8b4686&pm=s)
+- suivant la [maquette Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?type=design&node-id=0-1&mode=design)
+- complétant les user stories figurant dans les TODO du [Kanban](https://openclassrooms.notion.site/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e)
 
 ## Compétences évaluées
 
