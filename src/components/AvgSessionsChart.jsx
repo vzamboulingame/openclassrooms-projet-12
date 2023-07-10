@@ -10,10 +10,10 @@ import {
 /**
  * AvgSessionsChart component.
  *
- * @param {void}
+ * @param {object} props - Component props.
+ * @param {object} props.data - Average sessions data.
  * @returns {JSX.Element} - Rendered component.
  */
-
 export default function AvgSessionsChart(props) {
   const avgSessionsData = props.data.sessions;
   const dayLetters = ["L", "M", "M", "J", "V", "S", "D"];

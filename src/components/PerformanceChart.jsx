@@ -9,10 +9,10 @@ import {
 /**
  * PerformanceChart component.
  *
- * @param {void}
+ * @param {object} props - Component props.
+ * @param {object} props.data - Performance data.
  * @returns {JSX.Element} - Rendered component.
  */
-
 export default function PerformanceChart(props) {
   const performanceData = props.data.data;
 

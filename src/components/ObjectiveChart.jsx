@@ -3,7 +3,8 @@ import { PieChart, Pie, ResponsiveContainer } from "recharts";
 /**
  * ObjectiveChart component.
  *
- * @param {void}
+ * @param {object} props - Component props.
+ * @param {object} props.data - User data.
  * @returns {JSX.Element} - Rendered component.
  */
 export default function ObjectiveChart(props) {

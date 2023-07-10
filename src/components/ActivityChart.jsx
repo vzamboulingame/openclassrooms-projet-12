@@ -12,7 +12,8 @@ import {
 /**
  * ActivityChart component.
  *
- * @param {void}
+ * @param {object} props - Component props.
+ * @param {object} props.data - Activity data.
  * @returns {JSX.Element} - Rendered component.
  */
 export default function ActivityChart(props) {
