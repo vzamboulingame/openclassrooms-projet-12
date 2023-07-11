@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { DataContextProvider } from "./utils/DataContext";
-import Login from "./components/Login";
-import Dashboard from "./components/Dashboard";
-import NotFound from "./components/NotFound";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
 
 import "./styles/style.scss";
 
